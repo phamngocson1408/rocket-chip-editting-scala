@@ -1,1 +1,47 @@
-[0m[[0m[0mdebug[0m] [0m[0mNo changes[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set(/home/pnson89/RISCV/ROCKET/rocket-chip-ori/rocket-chip-learn-FPU/macros/src/main/scala/ValName.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set(/home/pnson/tmp/RISCV/ROCKET/rocket-chip-editting-scala/macros/src/main/scala/ValName.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set(/home/pnson89/RISCV/ROCKET/rocket-chip-ori/rocket-chip-learn-FPU/macros/target/scala-2.12/classes/freechips/rocketchip/macros/ValNameImpl$$typecreator1$1.class, /home/pnson89/RISCV/ROCKET/rocket-chip-ori/rocket-chip-learn-FPU/macros/target/scala-2.12/classes/freechips/rocketchip/macros/ValNameImpl$.class, /home/pnson89/RISCV/ROCKET/rocket-chip-ori/rocket-chip-learn-FPU/macros/target/scala-2.12/classes/freechips/rocketchip/macros/ValNameImpl.class)[0m
+[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set(/home/pnson89/.cache/coursier/v1/https/repo1.maven.org/maven2/org/json4s/json4s-jackson_2.12/3.6.1/json4s-jackson_2.12-3.6.1.jar, /home/pnson/.sbt/boot/scala-2.12.10/lib/scala-library.jar, /home/pnson/.sbt/boot/scala-2.12.10/lib/scala-reflect.jar, /home/pnson/.cache/coursier/v1/https/repo1.maven.org/maven2/org/json4s/json4s-core_2.12/3.6.1/json4s-core_2.12-3.6.1.jar, /home/pnson89/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.6/jackson-databind-2.9.6.jar, /home/pnson/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar, /home/pnson89/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar, /home/pnson/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.9.6/jackson-core-2.9.6.jar, /home/pnson89/.cache/coursier/v1/https/repo1.maven.org/maven2/org/json4s/json4s-scalap_2.12/3.6.1/json4s-scalap_2.12-3.6.1.jar, /home/pnson89/.sbt/boot/scala-2.12.10/lib/scala-reflect.jar, /home/pnson/.cache/coursier/v1/https/repo1.maven.org/maven2/org/json4s/json4s-ast_2.12/3.6.1/json4s-ast_2.12-3.6.1.jar, /home/pnson/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.6/jackson-databind-2.9.6.jar, /home/pnson/.cache/coursier/v1/https/repo1.maven.org/maven2/org/json4s/json4s-jackson_2.12/3.6.1/json4s-jackson_2.12-3.6.1.jar, /home/pnson89/.cache/coursier/v1/https/repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar, /home/pnson89/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.9.6/jackson-core-2.9.6.jar, /home/pnson/.cache/coursier/v1/https/repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar, /home/pnson89/.cache/coursier/v1/https/repo1.maven.org/maven2/org/json4s/json4s-core_2.12/3.6.1/json4s-core_2.12-3.6.1.jar, /home/pnson89/.cache/coursier/v1/https/repo1.maven.org/maven2/org/json4s/json4s-ast_2.12/3.6.1/json4s-ast_2.12-3.6.1.jar, /home/pnson89/.sbt/boot/scala-2.12.10/lib/scala-library.jar, /home/pnson/.cache/coursier/v1/https/repo1.maven.org/maven2/org/json4s/json4s-scalap_2.12/3.6.1/json4s-scalap_2.12-3.6.1.jar)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(freechips.rocketchip.macros.ValNameImpl)[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set(/home/pnson89/RISCV/ROCKET/rocket-chip-ori/rocket-chip-learn-FPU/macros/src/main/scala/ValName.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set(/home/pnson89/RISCV/ROCKET/rocket-chip-ori/rocket-chip-learn-FPU/macros/src/main/scala/ValName.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(freechips.rocketchip.macros.ValNameImpl)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/home/pnson/tmp/RISCV/ROCKET/rocket-chip-editting-scala/macros/src/main/scala/ValName.scala, /home/pnson89/RISCV/ROCKET/rocket-chip-ori/rocket-chip-learn-FPU/macros/src/main/scala/ValName.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: freechips.rocketchip.macros.ValNameImpl[0m
+[0m[[0m[0mdebug[0m] [0m[0mRecompiling all sources: number of invalidated sources > 50.0% of all sources[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 1 Scala source to /home/pnson/tmp/RISCV/ROCKET/rocket-chip-editting-scala/macros/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.3.1:compile for Scala 2.12.10[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.3.1:compile for Scala 2.12.10[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 5fd31804 for Scala compiler version 2.12.10[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-deprecation[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-unchecked[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-Xsource:2.11[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-Xplugin:/home/pnson/.cache/coursier/v1/https/repo1.maven.org/maven2/org/scalamacros/paradise_2.12.10/2.1.0/paradise_2.12.10-2.1.0.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/home/pnson/.sbt/boot/scala-2.12.10/lib/scala-library.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/home/pnson/tmp/RISCV/ROCKET/rocket-chip-editting-scala/macros/target/scala-2.12/classes:/home/pnson/.cache/coursier/v1/https/repo1.maven.org/maven2/org/json4s/json4s-jackson_2.12/3.6.1/json4s-jackson_2.12-3.6.1.jar:/home/pnson/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.9.0/jackson-annotations-2.9.0.jar:/home/pnson/.sbt/boot/scala-2.12.10/lib/scala-reflect.jar:/home/pnson/.cache/coursier/v1/https/repo1.maven.org/maven2/org/json4s/json4s-core_2.12/3.6.1/json4s-core_2.12-3.6.1.jar:/home/pnson/.cache/coursier/v1/https/repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.8/paranamer-2.8.jar:/home/pnson/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-core/2.9.6/jackson-core-2.9.6.jar:/home/pnson/.cache/coursier/v1/https/repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.9.6/jackson-databind-2.9.6.jar:/home/pnson/.cache/coursier/v1/https/repo1.maven.org/maven2/org/json4s/json4s-scalap_2.12/3.6.1/json4s-scalap_2.12-3.6.1.jar:/home/pnson/.cache/coursier/v1/https/repo1.maven.org/maven2/org/json4s/json4s-ast_2.12/3.6.1/json4s-ast_2.12-3.6.1.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 1.638451834 s[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone compiling.[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from freechips.rocketchip.macros.ValNameImpl...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: freechips.rocketchip.macros.ValNameImpl[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(freechips.rocketchip.macros.ValNameImpl)[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange APIChangeDueToMacroDefinition(freechips.rocketchip.macros.ValNameImpl) invalidates 1 classes due to The freechips.rocketchip.macros.ValNameImpl source file declares a macro.[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(freechips.rocketchip.macros.ValNameImpl)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: [0m
+[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mNo classes were invalidated.[0m
