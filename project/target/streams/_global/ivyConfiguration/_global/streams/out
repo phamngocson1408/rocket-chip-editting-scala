@@ -1,0 +1,1 @@
+[0m[[0m[33mwarn[0m] [0m[0minsecure HTTP request is deprecated 'http://download.eclipse.org/jgit/maven'; switch to HTTPS or opt-in as ("jgit-repo" at "http://download.eclipse.org/jgit/maven").withAllowInsecureProtocol(true)[0m

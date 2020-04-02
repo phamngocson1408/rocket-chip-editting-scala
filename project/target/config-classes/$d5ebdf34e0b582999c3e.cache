@@ -1,0 +1,7 @@
+make
+addons
+rocketchip
+rocket$minusmacros
+hardfloat
+api$minusconfig$minuschipsalliance
+chisel
