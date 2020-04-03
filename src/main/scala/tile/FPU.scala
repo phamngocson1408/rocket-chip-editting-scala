@@ -200,18 +200,30 @@ case class FType(exp: Int, sig: Int) {
 
   def classify(x: UInt) = {
     val sign = x(sig + exp)
+	sign.suggestName("sign")
     val code = x(exp + sig - 1, exp + sig - 3)
+	code.suggestName("code")
     val codeHi = code(2, 1)
+	codeHi.suggestName("codeHi")
     val isSpecial = codeHi === UInt(3)
+	isSpecial.suggestName("isSpecial")
 
     val isHighSubnormalIn = x(exp + sig - 3, sig - 1) < UInt(2)
+	isHighSubnormalIn.suggestName("isHighSubnormalIn")
     val isSubnormal = code === UInt(1) || codeHi === UInt(1) && isHighSubnormalIn
+	isSubnormal.suggestName("isSubnormal")
     val isNormal = codeHi === UInt(1) && !isHighSubnormalIn || codeHi === UInt(2)
+	isNormal.suggestName("isNormal")
     val isZero = code === UInt(0)
+	isZero.suggestName("isZero")
     val isInf = isSpecial && !code(0)
+	isInf.suggestName("isInf")
     val isNaN = code.andR
+	isNaN.suggestName("isNaN")
     val isSNaN = isNaN && !x(sig-2)
+	isSNaN.suggestName("isSNaN")
     val isQNaN = isNaN && x(sig-2)
+	isQNaN.suggestName("isQNaN")
 
     Cat(isQNaN, isSNaN, isInf && !sign, isNormal && !sign,
         isSubnormal && !sign, isZero && !sign, isZero && sign,
@@ -411,6 +423,7 @@ class FPToInt(implicit p: Parameters) extends FPUModule()(p) with ShouldBeRetime
 
   val in = RegEnable(io.in.bits, io.in.valid)
   val valid = Reg(next=io.in.valid)
+	valid.suggestName("valid")
 
   val dcmp = Module(new hardfloat.CompareRecFN(maxExpWidth, maxSigWidth))
   dcmp.io.a := in.in1
@@ -418,15 +431,18 @@ class FPToInt(implicit p: Parameters) extends FPUModule()(p) with ShouldBeRetime
   dcmp.io.signaling := !in.rm(1)
 
   val tag = !in.singleOut // TODO typeTag
+	tag.suggestName("tag")
   val store = ieee(in.in1)
   val toint = Wire(init = store)
   val intType = Wire(init = tag)
+	intType.suggestName("intType")
   io.out.bits.store := (floatTypes.map(t => Fill(maxType.ieeeWidth / t.ieeeWidth, store(t.ieeeWidth - 1, 0))): Seq[UInt])(tag)
   io.out.bits.toint := ((0 until nIntTypes).map(i => toint((minXLen << i) - 1, 0).sextTo(xLen)): Seq[UInt])(intType)
   io.out.bits.exc := Bits(0)
 
   when (in.rm(0)) {
     val classify_out = (floatTypes.map(t => t.classify(maxType.unsafeConvert(in.in1, t))): Seq[UInt])(tag)
+	classify_out.suggestName("classify_out")
     toint := classify_out | (store >> minXLen << minXLen)
     intType := 0
   }
@@ -438,6 +454,7 @@ class FPToInt(implicit p: Parameters) extends FPUModule()(p) with ShouldBeRetime
 
     when (!in.ren2) { // fcvt
       val cvtType = in.typ.extract(log2Ceil(nIntTypes), 1)
+	cvtType.suggestName("cvtType")
       intType := cvtType
 
       val conv = Module(new hardfloat.RecFNToIN(maxExpWidth, maxSigWidth, xLen))
@@ -451,13 +468,17 @@ class FPToInt(implicit p: Parameters) extends FPUModule()(p) with ShouldBeRetime
         val w = minXLen << i
         when (cvtType === i) {
           val narrow = Module(new hardfloat.RecFNToIN(maxExpWidth, maxSigWidth, w))
+	narrow.suggestName("narrow")
           narrow.io.in := in.in1
           narrow.io.roundingMode := in.rm
           narrow.io.signedOut := ~in.typ(0)
 
           val excSign = in.in1(maxExpWidth + maxSigWidth) && !maxType.isNaN(in.in1)
+	excSign.suggestName("excSign")
           val excOut = Cat(conv.io.signedOut === excSign, Fill(w-1, !excSign))
+	excOut.suggestName("excOut")
           val invalid = conv.io.intExceptionFlags(2) || narrow.io.intExceptionFlags(1)
+	invalid.suggestName("invalid")
           when (invalid) { toint := Cat(conv.io.out >> w, excOut) }
           io.out.bits.exc := Cat(invalid, UInt(0, 3), !invalid && conv.io.intExceptionFlags(0))
         }

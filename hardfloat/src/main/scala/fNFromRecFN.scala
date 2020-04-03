@@ -46,10 +46,14 @@ object fNFromRecFN
         val minNormExp = (BigInt(1)<<(expWidth - 1)) + 2
 
         val rawIn = rawFloatFromRecFN(expWidth, sigWidth, in)
+	rawIn.suggestName("rawIn")
 
         val isSubnormal = (rawIn.sExp < SInt(minNormExp))
+	isSubnormal.suggestName("isSubnormal")
         val denormShiftDist = UInt(1) - rawIn.sExp(log2Up(sigWidth - 1) - 1, 0)
+	denormShiftDist.suggestName("denormShiftDist")
         val denormFract = ((rawIn.sig>>1)>>denormShiftDist)(sigWidth - 2, 0)
+	denormFract.suggestName("denormFract")
 
         val expOut =
             Mux(isSubnormal,
@@ -57,11 +61,13 @@ object fNFromRecFN
                 rawIn.sExp(expWidth - 1, 0) -
                     UInt((BigInt(1)<<(expWidth - 1)) + 1)
             ) | Fill(expWidth, rawIn.isNaN || rawIn.isInf)
+	expOut.suggestName("expOut")
         val fractOut =
             Mux(isSubnormal,
                 denormFract,
                 Mux(rawIn.isInf, UInt(0), rawIn.sig(sigWidth - 2, 0))
             )
+	fractOut.suggestName("fractOut")
         Cat(rawIn.sign, expOut, fractOut)
     }
 }
