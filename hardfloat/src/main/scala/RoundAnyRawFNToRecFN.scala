@@ -118,6 +118,7 @@ class
 	adjustedSig.suggestName("adjustedSig")
     val doShiftSigDown1 =
         if (sigMSBitAlwaysZero) Bool(false) else adjustedSig(outSigWidth + 2)
+	doShiftSigDown1.suggestName("doShiftSigDown1")
 
     val common_expOut   = Wire(UInt(width = outExpWidth + 1))
     val common_fractOut = Wire(UInt(width = outSigWidth - 1))

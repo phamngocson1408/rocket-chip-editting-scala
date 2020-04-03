@@ -48,14 +48,20 @@ object rawFloatFromIN
         val extIntWidth = 1<<(expWidth - 1)
 
         val sign = signedIn && in(in.getWidth - 1)
+	sign.suggestName("sign")
         val absIn = Mux(sign, -in.asUInt, in.asUInt)
+	absIn.suggestName("absIn")
         val extAbsIn = Cat(UInt(0, extIntWidth), absIn)(extIntWidth - 1, 0)
+	extAbsIn.suggestName("extAbsIn")
         val adjustedNormDist = countLeadingZeros(extAbsIn)
+	adjustedNormDist.suggestName("adjustedNormDist")
         val sig =
             (extAbsIn<<adjustedNormDist)(
                 extIntWidth - 1, extIntWidth - in.getWidth)
+	sig.suggestName("sig")
 
         val out = Wire(new RawFloat(expWidth, in.getWidth))
+	out.suggestName("out")
         out.isNaN  := Bool(false)
         out.isInf  := Bool(false)
         out.isZero := ! sig(in.getWidth - 1)

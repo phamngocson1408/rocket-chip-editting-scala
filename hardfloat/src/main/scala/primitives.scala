@@ -199,8 +199,10 @@ object orReduceBy4
 {
     def apply(in: UInt): UInt =
     {
+	in.suggestName("in")
         val reducedWidth = (in.getWidth + 3)>>2
         val reducedVec = Wire(Vec(reducedWidth, Bool()))
+	reducedVec.suggestName("reducedVec")
         for (ix <- 0 until reducedWidth - 1) {
             reducedVec(ix) := in(ix * 4 + 3, ix * 4).orR
         }

@@ -54,6 +54,7 @@ class INToRecFN(intWidth: Int, expWidth: Int, sigWidth: Int) extends Module
     //------------------------------------------------------------------------
     //------------------------------------------------------------------------
     val intAsRawFloat = rawFloatFromIN(io.signedIn, io.in);
+	intAsRawFloat.suggestName("intAsRawFloat")
 
     val roundAnyRawFNToRecFN =
         Module(
